@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Saira:700');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+@font-face {
+  font-family: 'Streamster';
+  src: url('/fonts/Streamster.ttf');
+}
+@font-face {
+  font-family: 'Joystix';
+  src: url('/fonts/joystix.ttf');
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  background-image: url('/images/BG.svg');
+  width: 100%;
+  top: 30%;
+  transition: top 1s;
+  height: 100vh;
+  font-family: 'Saira', sans-serif;
+  font-weight: 700;
+}
+
+header {
+  text-align: left;
+  padding: 10px;
+  margin: 0px;
+}
+
+.MenuButton {
+  font-family: 'joystix';
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin: -10px 10px 0px;
+}
+.wrapper {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+.graph-container {
+  overflow: hidden;
+  height: 100vh;
+}
+.graph {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(54, 226, 248, 0.5) 0%,
+      rgba(54, 226, 248, 0.5) 3px,
+      rgba(0, 0, 0, 0) 0px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(54, 226, 248, 0.5) 0%,
+      rgba(54, 226, 248, 0.5) 3px,
+      rgba(0, 0, 0, 0) 0px
+    );
+  background-size: 4em 4em, 4em 4em;
+  background-color: black;
+  height: 40em;
+  perspective: 1000px;
+  margin-top: 20em;
+  transform: perspective(200px) rotateX(45deg) scale(2);
+  width: 100%;
+}
+
+h1 {
+  background: linear-gradient(
+    to bottom,
+    #ebf1f6 0%,
+    #abd3ee 50%,
+    #859ee2 51%,
+    #d5ebfb 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  transition: font-size 1s;
+  position: absolute;
+  text-transform: uppercase;
+  text-shadow: 1px -1px 0 rgba(255, 255, 255, 0.5),
+    3px 1px 3px rgba(255, 0, 255, 0.85), -3px -2px 3px rgba(0, 0, 255, 0.85),
+    1px -2px 0 rgba(255, 255, 255, 0.8);
+  z-index: -3;
+}
+
+h2 {
+  text-shadow: 1px -1px 0 rgba(255, 255, 255, 0.5),
+    2px 1px 2px rgba(255, 0, 255, 0.85), -3px -2px 3px rgba(0, 0, 255, 0.85),
+    1px -2px 0 rgba(255, 255, 255, 0.8);
+  color: rgb(255, 0, 234);
+  font-size: 2em;
+  transform: rotateZ(-15deg);
+  position: absolute;
+  font-family: 'Streamster', cursive;
+  font-size: 50px;
+  letter-spacing: 8px;
+  transition: font-size 1s;
+  margin-top: 3.5em;
+}
